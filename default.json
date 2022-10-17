@@ -1,0 +1,13 @@
+{
+    "extends": ["config:base", ":preserveSemverRanges"],
+    "schedule": ["after 6pm on sunday"],
+    "timezone": "Asia/Shanghai",
+    "packageRules": [
+        {
+            "matchUpdateTypes": ["major", "minor", "patch"],
+            "matchPackagePatterns": ["*"],
+            "groupName": "all non-major dependencies",
+            "groupSlug": "all-minor-patch"
+        }
+    ]
+}
